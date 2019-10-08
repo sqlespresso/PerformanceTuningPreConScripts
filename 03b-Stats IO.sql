@@ -23,6 +23,7 @@ GO
 SET STATISTICS IO ON
 GO
 SET STATISTICS TIME ON;
+--I always like to show this SET STATISTICS TIME,IO ON;
 GO  
 SELECT Name, [Description],[UnitPrice],[UnitPriceDiscount]
 FROM [Production].[Product] p

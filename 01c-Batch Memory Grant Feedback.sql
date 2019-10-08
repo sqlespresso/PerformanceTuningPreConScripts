@@ -4,7 +4,7 @@
 - Batch-Mode Memory Grant Feedback Demo
 - Script attribution: Example script can be found on Git hub
 - Link https://github.com/microsoft/sql-server-samples/tree/master/samples/demos/Showplan
-- Show How SQL Server 2016 now corrects MEMORY Grants Automatically
+- Show How SQL Server 2016 --JD Edit 2017 now corrects MEMORY Grants Automatically
 
 ***************************************************************************************************/
 
