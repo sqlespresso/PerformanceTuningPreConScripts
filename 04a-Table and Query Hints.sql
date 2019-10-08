@@ -3,7 +3,7 @@
 /**************************************************************************************************
 - Using Table Hints
 - Script1  attribution: Monica Rathbun
-- Link: 
+- Link: https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - Script 2 attribution: Amit Bansal
 - Link: https://www.sqlservergeeks.com/sql-server-using-optimize-for-query-hint/
 

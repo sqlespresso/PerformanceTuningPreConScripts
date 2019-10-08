@@ -3,7 +3,7 @@
 /**************************************************************************************************
 - STATISTICS IO and TIME 
 - Script attribution: Monica Rathbun
-- Link 
+- Link https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - Show the importance of knowing the query performance numbers when tuning
 
 ***************************************************************************************************/
@@ -20,10 +20,9 @@ DROP INDEX IDX_UnitPrice_UnitPriceDiscount ON [Sales].[SalesOrderDetail]
 
 USE AdventureWorks2016CTP3;  
 GO
-SET STATISTICS IO ON
+SET STATISTICS IO ON --SET STATISTICS TIME,IO ON  
 GO
 SET STATISTICS TIME ON;
---I always like to show this SET STATISTICS TIME,IO ON;
 GO  
 SELECT Name, [Description],[UnitPrice],[UnitPriceDiscount]
 FROM [Production].[Product] p

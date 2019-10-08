@@ -2,7 +2,7 @@
 /**************************************************************************************************
 - Creating and using a Columnstore 
 - Script attribution: Monica Rathbun
-- Link: 
+- Link: https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - Show how to create a column store index
 - Show the columnstore in system table
 

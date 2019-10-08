@@ -3,7 +3,7 @@
 /**************************************************************************************************
 - Index Cost and Benefits
 - Script attribution: Monica Rathbun
-- Link: 
+- Link: https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - Show how adding an index increase cost of inserts
 - Show the benefits of the index on reads
 
