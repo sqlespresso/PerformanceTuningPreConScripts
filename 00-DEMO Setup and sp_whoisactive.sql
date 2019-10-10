@@ -14,6 +14,15 @@ sp_whoisactive @get_plans=1
 --RESTORE ALL DATABASES
 --------------------------------------------------------------------------------------------------
 
+RESTORE filelistonly FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
+RESTORE headeronly FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
+
+--AdventureWorks2014
+RESTORE DATABASE AdventureWorks2014 FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
+WITH RECOVERY, REPLACE, STATS=5,
+       MOVE 'AdventureWorks2014_Data' TO 'F:\Data\AdventureWorks2014_Data.mdf',
+       MOVE 'AdventureWorks2014_Log' TO 'F:\Log\AdventureWorks2014_Log.ldf'
+GO
 
 RESTORE filelistonly FROM DISK = 'C:\Users\mradmin\Downloads\Precon\WideWorldImportersDW-Full.bak'
 RESTORE headeronly FROM DISK = 'C:\Users\mradmin\Downloads\Precon\WideWorldImportersDW-Full.bak'
