@@ -6,6 +6,7 @@ WideWorldImportersDW
 WideWorldImporters
 AdventureworksDW2016CTP3
 Adventureworks2016CTP3
+Adventureworks2014
 
 https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-2017
 https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-oltp-install-configure?view=sql-server-2017
