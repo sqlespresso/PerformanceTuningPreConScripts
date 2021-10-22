@@ -75,13 +75,13 @@ GO
 --------------------------------------------------------------------------------------------------
 
 /* SQL Server Execution Times:
-   CPU time = 31 ms,  elapsed time = 544 ms.
+   CPU time = 15 ms,  elapsed time = 35 ms.
 SQL Server parse and compile time: 
    CPU time = 0 ms, elapsed time = 0 ms
 
 Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'Workfile'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
-Table 'SalesOrderDetail'. Scan count 1, logical reads 455, physical reads 0, read-ahead reads 4, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+Table 'SalesOrderDetail'. Scan count 1, logical reads 1266, physical reads 0, read-ahead reads 4, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'ProductDescription'. Scan count 0, logical reads 211, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'Product'. Scan count 1, logical reads 15, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 */
@@ -90,11 +90,11 @@ Table 'Product'. Scan count 1, logical reads 15, physical reads 0, read-ahead re
 --AFTER INDEX
 --------------------------------------------------------------------------------------------------
 /*  SQL Server Execution Times:
-   CPU time = 0 ms,  elapsed time = 176 ms.
+   CPU time = 0 ms,  elapsed time = 20 ms.
 SQL Server parse and compile time: 
    CPU time = 0 ms, elapsed time = 0 ms.
 
-Table 'SalesOrderDetail'. Scan count 10, logical reads 38, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
+Table 'SalesOrderDetail'. Scan count 10, logical reads 40, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'ProductDescription'. Scan count 0, logical reads 211, physical reads 0, read-ahead reads 8, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
 Table 'Product'. Scan count 1, logical reads 15, physical reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob read-ahead reads 0.
