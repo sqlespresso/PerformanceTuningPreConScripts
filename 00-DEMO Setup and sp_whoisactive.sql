@@ -14,18 +14,17 @@ sp_whoisactive @get_plans=1
 --RESTORE ALL DATABASES
 --------------------------------------------------------------------------------------------------
 
-RESTORE filelistonly FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
-RESTORE headeronly FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
+
+RESTORE filelistonly FROM DISK = 'C:\Users\jmadmin\Dropbox\Precon\AdventureWorks2014.bak'
+RESTORE headeronly FROM DISK = 'C:\Users\jmadmin\Dropbox\Precon\AdventureWorks2014.bak'
 
 --AdventureWorks2014
-RESTORE DATABASE AdventureWorks2014 FROM DISK = 'C:\Users\mradmin\Dropbox\Precon\AdventureWorks2014.bak'
+RESTORE DATABASE AdventureWorks2014 FROM DISK = 'C:\Users\jmadmin\Dropbox\Precon\AdventureWorks2014.bak'
 WITH RECOVERY, REPLACE, STATS=5,
        MOVE 'AdventureWorks2014_Data' TO 'F:\Data\AdventureWorks2014_Data.mdf',
        MOVE 'AdventureWorks2014_Log' TO 'F:\Log\AdventureWorks2014_Log.ldf'
 GO
 
-RESTORE filelistonly FROM DISK = 'C:\Users\mradmin\Downloads\Precon\WideWorldImportersDW-Full.bak'
-RESTORE headeronly FROM DISK = 'C:\Users\mradmin\Downloads\Precon\WideWorldImportersDW-Full.bak'
 
 -- AdventureWorks
 RESTORE DATABASE AdventureWorks2016CTP3 FROM DISK = 'C:\Users\mradmin\Downloads\Precon\AdventureWorks2016CTP3.bak'
@@ -104,6 +103,7 @@ GO
 ---q Quiet mode  no result display.
 ---o Output file directory
 ----------------------------------------------aq-----------------------------------------------
+
 --ADD USER
 CREATE LOGIN [ostress] WITH PASSWORD = N'Passw0rd1234'
 GO
