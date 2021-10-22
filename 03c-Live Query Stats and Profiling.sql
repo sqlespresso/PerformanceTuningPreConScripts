@@ -2,7 +2,7 @@
 /**************************************************************************************************
 - LIVE QUERY STATS AND QUERY PROFILING 
 - Script attribution: Monica Rathbun
-- Link: 
+- Link: https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - USING LIVE QUERY STATS AND QUERY PROFILING TO TROUBLE SHOOT PLANS
 
 
