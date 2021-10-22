@@ -63,7 +63,7 @@ GROUP BY ProductKey
 
 --------------------------------------------------------------------------------------------------
 -- ADD CS INDEX -- TAKES 3 mins 
--- bot running in DEMO use CCI table which is same table but has index
+-- Not running in DEMO use CCI table which is same table but has index
 --------------------------------------------------------------------------------------------------
 
 --USE [AdventureworksDW2016CTP3]
@@ -92,7 +92,21 @@ GROUP BY ProductKey
 --------------------------------------------------------------------------------------------------
 --REVIEW THE NUMBERS & PLAN
 --------------------------------------------------------------------------------------------------
+--without 
+--Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+--Table 'Workfile'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+--Table 'FactResellerSalesXL'. Scan count 3, logical reads 315398, physical reads 893, page server reads 0, read-ahead reads 226179, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
 
+-- SQL Server Execution Times:
+--   CPU time = 10485 ms,  elapsed time = 10522 ms.
+
+--with
+--Table 'FactResellerSalesXL_CCI'. Scan count 2, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 7428, lob physical reads 1, lob page server reads 0, lob read-ahead reads 18323, lob page server read-ahead reads 0.
+--Table 'FactResellerSalesXL_CCI'. Segment reads 12, segment skipped 0.
+--Table 'Worktable'. Scan count 0, logical reads 0, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
+-- SQL Server Execution Times:
+--   CPU time = 687 ms,  elapsed time = 572 ms.
 
 --------------------------------------------------------------------------------------------------
 --LETS LOOK AT INSIGHTS
