@@ -44,8 +44,8 @@ SELECT [OrderDate],[UnitPrice],[OrderQuantity]
 FROM [dbo].[FactResellerSalesXL]
 WHERE ORDERDATE='2010-05-05'
 
---cpu time 1749 elapsed time- 1974
---scan count 5 and logical reads 315399
+--cpu time 3954 elapsed time- 12677
+--scan count 3 and logical reads 315398
 
 --------------------------------------------------------------------------------------------------
 --INSERT WITH NO INDEX
@@ -90,7 +90,7 @@ GO
 --------------------------------------------------------------------------------------------------
 --LOOK AT STATS IO and ACTUAL PLAN
 
---INSERT takes approx 29ms
+--INSERT takes approx 82ms
 --------------------------------------------------------------------------------------------------
   
 --------------------------------------------------------------------------------------------------
@@ -113,7 +113,7 @@ INSERT INTO [dbo].[FactResellerSalesXL]
            ,[PromotionKey]
            ,[CurrencyKey]
            ,[SalesTerritoryKey]
-           ,'S09999997'--change this number 
+           ,'S09999996'--change this number 
            ,[SalesOrderLineNumber]
            ,[RevisionNumber]
            ,[OrderQuantity]
@@ -136,7 +136,7 @@ INSERT INTO [dbo].[FactResellerSalesXL]
 --------------------------------------------------------------------------------------------------
 --LOOK AT STATS IO and ACTUAL PLAN
 
---INSERT now takes approx 43 ms Cost increase
+--INSERT now takes approx 18 ms Cost increase
 --------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------
@@ -149,10 +149,12 @@ WHERE ORDERDATE='2010-05-05 00:00:00.000'
 --------------------------------------------------------------------------------------------------
 -- ***SUMMARY**
 -- AFTER INDEX
--- CPU Time 78 elasped time 371
--- 1 scan and logical reads 6409
+-- CPU Time 63 elasped time 488
+-- 1 scan and logical reads 6406
 
 -- WITHOUT INDEX
--- cpu time 1749 elapsed time- 1974
--- scan count 5 and logical reads 315399
+-- cpu time 3954 elapsed time- 12677
+-- scan count 3 and logical reads 315398
+
+
 --------------------------------------------------------------------------------------------------
