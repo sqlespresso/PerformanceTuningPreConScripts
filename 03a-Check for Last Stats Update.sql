@@ -5,7 +5,7 @@
 - Last Statistics Updates
 - Script attribution: Pedro Lopes (Microsoft) pedro.lopes@microsoft.com 
 - Link http://aka.ms/sqlinsights/
-- Checks for statistics last update date in the current database.
+- Checks for statistics last update date in the current database
 
 ***************************************************************************************************/
 DECLARE @sqlcmd NVARCHAR(4000), @sqlmajorver int, @sqlminorver int, @sqlbuild int
