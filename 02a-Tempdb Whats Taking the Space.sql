@@ -5,57 +5,11 @@
 - Script attribution: Kendra Little
 - Link https://littlekendra.com/2009/08/27/whos-using-all-that-space-in-tempdb-and-whats-their-plan/
 - Show Tempdb usage, look for the largest allocated values
-
+- PART 2
 ***************************************************************************************************/
-
----------------------------------------------------------------
---Create a Tempdb Workload
---Takes 32 seconds
----------------------------------------------------------------
-USE MemGrants
-GO
-CREATE TABLE t1 (c1 int primary key, c2 int, c3 char(8000))
-go
-CREATE TABLE t2 (c4 int, c5 char(8000))
-go
-
-DECLARE @i int
-SELECT @i=0
-WHILE (@i<160000)
-BEGIN
-	INSERT INTO t1 VALUES (@i, @i+1000, 'Hello')
-	INSERT INTO t2 VALUES (@i, 'There')
-	SET @i=@i+1
-END
-
----------------------------------------------------------------
--- now clean buffer pool so that this query takes some time to complete
--- and we can see Tempdb space usage
----------------------------------------------------------------
-
-DBCC freeproccache 
-
----------------------------------------------------------------
---Removes all elements from the plan cache Clearing the procedure (plan) 
---cache causes all plans to be evicted, and incoming query executions will compile a new plan, 
---instead of reusing any previously cached plan.
----------------------------------------------------------------
----------------------------------------------------------------
---Removes all clean buffers from the buffer pool
----------------------------------------------------------------
-DBCC dropcleanbuffers 
-
----------------------------------------------------------------
---start the query
----------------------------------------------------------------
-SELECT c1,c5
-FROM t1 INNER HASH JOIN t2 ON t1.c1=t2.c4
-ORDER BY c2
-
 ---------------------------------------------------------------
 --IN NEW WINDOW LOOK AT TEMPDB
 ---------------------------------------------------------------
-
 
 SELECT
     t1.session_id
