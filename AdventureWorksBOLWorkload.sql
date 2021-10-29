@@ -51,14 +51,12 @@ GO
 
 ------
 
--- http://msdn.microsoft.com/en-us/library/ms178544.aspx
+--
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'
 FROM Sales.SalesPerson
 GROUP BY SalesQuota WITH ROLLUP;
 
-------
-
--- http://msdn.microsoft.com/en-us/library/bb510624.aspx
+go
 SELECT D.Name
     ,CASE 
     WHEN GROUPING_ID(D.Name, E.JobTitle) = 0 THEN E.JobTitle
@@ -78,7 +76,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 
 ------
 
--- http://msdn.microsoft.com/en-us/library/bb510624.aspx
+
 SELECT D.Name
     ,E.JobTitle
     ,GROUPING_ID(D.Name, E.JobTitle) AS 'Grouping Level'
@@ -95,7 +93,7 @@ HAVING GROUPING_ID(D.Name, E.JobTitle) = 0; --All titles
 
 ------
 
--- http://msdn.microsoft.com/en-us/library/bb510624.aspx
+
 SELECT D.Name
     ,E.JobTitle
     ,GROUPING_ID(D.Name, E.JobTitle) AS 'Grouping Level'
@@ -120,7 +118,7 @@ WHERE LoginID = 'adventure-works\david0'
 SELECT OrganizationNode.ToString() AS Text_OrganizationNode, *
 FROM HumanResources.Employee
 WHERE OrganizationNode.GetAncestor(1) = @CurrentEmployee ;
-
+go
 
 DECLARE @CurrentEmployee hierarchyid
 SELECT @CurrentEmployee = OrganizationNode 
@@ -131,7 +129,7 @@ SELECT OrganizationNode.ToString() AS Text_OrganizationNode, *
 FROM HumanResources.Employee
 WHERE OrganizationNode.GetAncestor(2) = @CurrentEmployee ;
 
-
+go
 DECLARE @CurrentEmployee hierarchyid
 SELECT @CurrentEmployee = OrganizationNode 
 FROM HumanResources.Employee
@@ -140,7 +138,7 @@ WHERE LoginID = 'adventure-works\david0'
 SELECT OrganizationNode.ToString() AS Text_OrganizationNode, *
 FROM HumanResources.Employee
 WHERE OrganizationNode.GetAncestor(0) = @CurrentEmployee ;
-
+go
 DECLARE @CurrentEmployee hierarchyid ;
 DECLARE @TargetEmployee hierarchyid ;
 SELECT @CurrentEmployee = '/2/3/1.2/5/3/' ;
@@ -149,7 +147,7 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 
 ------
 
--- http://msdn.microsoft.com/en-us/library/ms181708.aspx
+----http://msdn.microsoft.com/en-us/library/ms181708.aspx
 SELECT CustomerID, OrderDate, SubTotal, TotalDue
 FROM Sales.SalesOrderHeader
 WHERE SalesPersonID = 35
@@ -263,13 +261,13 @@ The following first example creates a temporary table named
 
 --USE tempdb;
 --
-IF OBJECT_ID (N'#Bicycles',N'U') IS NOT NULL
-DROP TABLE #Bicycles;
-
-SELECT * 
-INTO #Bicycles
-FROM AdventureWorks2014.Production.Product
-WHERE ProductNumber LIKE 'BK%';
+--IF OBJECT_ID (N'#Bicycles',N'U') IS NOT NULL
+--DROP TABLE #Bicycles;
+--go
+--SELECT * 
+--INTO #Bicycles
+--FROM AdventureWorks2017.Production.Product
+--WHERE ProductNumber LIKE 'BK%';
 
 
 /*
@@ -506,7 +504,7 @@ ORDER BY ProductID;
 This query uses the LIKE clause in the HAVING clause. 
 */
 
-USE AdventureWorks2014 ;
+--USE AdventureWorks2014 ;
 
 SELECT SalesOrderID, CarrierTrackingNumber 
 FROM Sales.SalesOrderDetail
