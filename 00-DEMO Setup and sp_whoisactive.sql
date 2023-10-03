@@ -8,7 +8,15 @@
 --FOR TESTING MAKE SURE YOU HAVE SP_WHOISACTIVE installed
 --------------------------------------------------------------------------------------------------
 
-sp_whoisactive @get_plans=1
+--------------------------------
+--Active Transactions
+-------------------------------
+
+sp_whoisactive
+@get_plans=1,
+@get_outer_command  = 1,	
+--@get_avg_time  = 1,
+@find_block_leaders = 1--,
 
 --------------------------------------------------------------------------------------------------
 --RESTORE ALL DATABASES
