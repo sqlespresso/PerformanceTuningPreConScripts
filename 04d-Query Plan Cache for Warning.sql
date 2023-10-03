@@ -5,8 +5,9 @@
 - Link https://github.com/microsoft/tigertoolbox/tree/master/Mining-PlanCache
 - Show Excution plan WARNING examples
 
-- TURN ON QUERY PLAN
+
 - Note that SpillToTempDb warnings are only found in actual execution plans
+-- RUN FOR A FEW SECONDS THEN STOP AND LOOK AT RESULTS AS IT CAN TAKE AWHILE TO RUN
 ***************************************************************************************************/
 
 --------------------------------------------------------------------------------------------------
