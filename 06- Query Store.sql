@@ -42,14 +42,14 @@ JOIN [sys].[query_store_runtime_stats_interval] [rsi]
                 ON [rs].[runtime_stats_interval_id] = [rsi].[runtime_stats_interval_id]		
 WHERE--[qsq].[query_id] IN ( 25808418)
 --query_sql_text like'%usp_Enroll%'
-qsq.object_id IN (1607676775)
+--qsq.object_id IN (1607676775)
 --qsp.query_plan_hash IN ( 'E0FB4A4186253F3CF88A44F1DC0ECC159E56B1BD')
 --[qsp].[plan_id]=36912092
 --AND 
 --[rsi].[end_time] >= '2023-10-02 00:59:59.0000000 +00:00' --rsi --1800= 2pm		
 --AND [rsi].[end_time] <= '2023-10-02 23:59:59.0000000 +00:00' --rsi		
 --and
---[rs].[execution_type]in (3,4)		---[rs].[execution_type] in (3,4)		--FAILURES and CANCELS	
+[rs].[execution_type]in (3,4)		---[rs].[execution_type] in (3,4)		--FAILURES and CANCELS	
 ORDER BY  --query_sql_text,
 [rsi].[start_time],[rsi].[end_time] desc 
 --[rs].[avg_duration] DESC

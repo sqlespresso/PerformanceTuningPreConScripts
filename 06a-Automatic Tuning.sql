@@ -1,10 +1,10 @@
 
 /**************************************************************************************************
 - Automatic Plan Corrections
-- Script attribution: Example script can be found on msdoc
-- Link https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql?view=sql-server-2017
+- Script attribution: 
+- Link https://github.com/sqlespresso/PerformanceTuningPreConScripts
 - Using sp_estimate_data_compression_savings to estimate table or index\partition 
---compression saving by type
+
 
 ***************************************************************************************************/
 
